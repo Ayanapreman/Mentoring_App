@@ -22,7 +22,8 @@ class ViewReply extends StatelessWidget {
       title: 'View Tips',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 18, 82, 98)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(
+            255, 174, 120, 230)),
         useMaterial3: true,
       ),
       home: const UserViewTips(title: 'View Tips'),
@@ -117,7 +118,8 @@ class _UserViewTipsState extends State<UserViewTips> {
               MaterialPageRoute(builder: (context) => HomeNewPage(title: 'Home',)),);
 
           },),
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Color.fromARGB(
+              255, 174, 120, 230),
           title: Text(widget.title),
         ),
         body: ListView.builder(
@@ -125,7 +127,7 @@ class _UserViewTipsState extends State<UserViewTips> {
           itemCount: id_.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
-              height: 150, // Set the desired height here
+              // height: 250, // Set the desired height here
               child: Card(
                 child: Padding(
                   padding: EdgeInsets.all(16),

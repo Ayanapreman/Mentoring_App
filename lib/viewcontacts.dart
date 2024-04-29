@@ -112,7 +112,9 @@ class _viewcontactsState extends State<viewcontacts> {
               );
             },
           ),
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Color.fromARGB(
+              255, 174, 120, 230),
+          // backgroundColor: Theme.of(context).colorScheme.primary,
           title: Text(widget.title),
         ),
         body: ListView(

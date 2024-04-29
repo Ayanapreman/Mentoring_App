@@ -119,7 +119,8 @@ class _UserViewMentoringClassState extends State<UserViewMentoringClass> {
               MaterialPageRoute(builder: (context) => HomeNewPage(title: 'Home',)),);
 
           },),
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Color.fromARGB(
+              255, 174, 120, 230),
           title: Text(widget.title),
         ),
         body:

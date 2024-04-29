@@ -119,7 +119,8 @@ class _ViewReplyPageState extends State<ViewReplyPage> {
               MaterialPageRoute(builder: (context) => HomeNewPage(title: 'Home',)),);
 
           },),
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Color.fromARGB(
+              255, 174, 120, 230),
           title: Text(widget.title),
         ),
         // body: ListView.builder(
@@ -243,7 +244,7 @@ class _ViewReplyPageState extends State<ViewReplyPage> {
           itemCount: id_.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
-              height: 200, // Set the desired height here
+              // height: 200, // Set the desired height here
               child: Card(
                 child: Padding(
                   padding: EdgeInsets.all(16),
@@ -271,11 +272,13 @@ class _ViewReplyPageState extends State<ViewReplyPage> {
                         ),
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Expanded(
+                          Text('Complaint:'),
+                          Container(
+                            width: MediaQuery.of(context).size.width-120,
                             child: ReadMoreText(
-                              "Complaint : ${complaint_[index]}",
+                              "${complaint_[index]}",
                             ),
                           ),
                         ],

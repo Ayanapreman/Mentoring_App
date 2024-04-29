@@ -21,7 +21,8 @@ class ViewProfile extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(
+          255, 58, 162, 183,)),
         useMaterial3: true,
       ),
       home: const ViewProfilePage(title: 'View Profile'),

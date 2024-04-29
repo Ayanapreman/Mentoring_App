@@ -74,7 +74,8 @@ class _MyEditProfilePageState extends State<MyEditProfilePage> {
     return Scaffold(
       appBar: AppBar(
 
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color.fromARGB(
+            255, 174, 120, 230),
 
         title: Text(widget.title),
       ),
@@ -126,6 +127,9 @@ class _MyEditProfilePageState extends State<MyEditProfilePage> {
                   validator: (value) {
                     if (value!.isEmpty){
                       return 'field must not be empty';
+                    }
+                    else if (!RegExp(r'^[6-9][0-9]{9}$').hasMatch(value)) {
+                      return 'Enter a valid phone number';
                     }
                     return null;
                   },

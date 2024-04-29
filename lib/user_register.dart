@@ -132,7 +132,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                     if (value!.isEmpty){
                       return 'field must not be empty';
                     }
-                    if (!RegExp(r'^\+?[6-9]\d{1,10}$').hasMatch(value)) {
+                    else if (!RegExp(r'^[6-9][0-9]{9}$').hasMatch(value)) {
                       return 'Enter a valid phone number';
                     }
                     return null;

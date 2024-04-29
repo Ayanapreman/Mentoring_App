@@ -52,7 +52,8 @@ class _MyChngPwdPageState extends State<MyChngPwdPage> {
     return Scaffold(
       appBar: AppBar(
 
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color.fromARGB(
+            255, 174, 120, 230),
 
         title: Text(widget.title),
       ),

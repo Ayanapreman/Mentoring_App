@@ -51,7 +51,8 @@ class _MySendReviewPageState extends State<MySendReviewPage> {
     return Scaffold(
       appBar: AppBar(
 
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color.fromARGB(
+            255, 174, 120, 230),
 
         title: Text(widget.title),
       ),

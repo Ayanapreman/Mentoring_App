@@ -209,7 +209,7 @@ class _HomeNewPageState extends State<HomeNewPage> {
       onWillPop: () async{ return true; },
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 18, 82, 98),
+          backgroundColor: Color.fromARGB(255, 174, 120, 230),
 
           title: Text(widget.title),
         ),
@@ -498,13 +498,14 @@ class _HomeNewPageState extends State<HomeNewPage> {
             children: [
               DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 18, 82, 98),
+
+                  color: Color.fromARGB(255, 174, 120, 230),
                 ),
                 child:
                 Column(children: [
 
                   Text(
-                    'Mentoring',
+                    'Mentor Me',
                     style: TextStyle(fontSize: 20,color: Colors.white),
 
                   ),

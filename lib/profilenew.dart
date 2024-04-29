@@ -41,13 +41,15 @@ class _ProfilePageState extends State<ProfilePage> {
 
 
           ),
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Color.fromARGB(
+              255, 174, 120, 230),
 
           title: Text(widget.title),
 
         ),
 
-        backgroundColor: Colors.deepPurple[300],
+        backgroundColor: Color.fromARGB(
+            255, 174, 120, 230),
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

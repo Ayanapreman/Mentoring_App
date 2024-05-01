@@ -11,6 +11,8 @@ void main() {
 }
 // MyAppnew comment
 
+// second comment
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

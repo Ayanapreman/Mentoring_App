@@ -221,7 +221,7 @@ class _HomeNewPageState extends State<HomeNewPage> {
             children: [
               Container(
                 // alignment: MainAxisAlignment.center,
-                width: 160, // Adjust the width as needed
+                width: 215, // Adjust the width as needed
                 height: 80, // Adjust the height as needed
                 child:
                 Card(
@@ -240,7 +240,7 @@ class _HomeNewPageState extends State<HomeNewPage> {
 
               Container(
                 // alignment: MainAxisAlignment.center,
-                width: 160, // Adjust the width as needed
+                width: 215, // Adjust the width as needed
                 height: 80, // Adjust the height as needed
                 child:
                 Card(
@@ -261,7 +261,7 @@ class _HomeNewPageState extends State<HomeNewPage> {
               SizedBox(height: 40,),
               Container(
                 // alignment: MainAxisAlignment.center,
-                width: 160, // Adjust the width as needed
+                width: 210, // Adjust the width as needed
                 height: 80, // Adjust the height as needed
                 child:
                 Card(

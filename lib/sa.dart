@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http_parser/http_parser.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart'as http;
 import 'home_page.dart';
@@ -50,6 +51,8 @@ class _CameraScreenState extends State<CameraScreen> {
   @override
   void initState() {
     super.initState();
+
+    checkCameraPermission();
     _controller = CameraController(
       widget.camera,
       ResolutionPreset.medium,
@@ -73,6 +76,23 @@ class _CameraScreenState extends State<CameraScreen> {
     });
   }
 
+
+  int cameraPermission = -1;
+
+  Future<void> checkCameraPermission() async {
+    var cameraPermissionStatus = await Permission.camera.status;
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>\ncamera permission >> " +
+        cameraPermissionStatus.name);
+    if (cameraPermissionStatus.name == "granted") {
+      cameraPermission = 1;
+      // scheduleTimeout(4 * 1000);
+    } else if (cameraPermissionStatus.name == "denied") {
+      cameraPermission = 2;
+    } else {
+      cameraPermission=0;
+    }
+    setState(() {});
+  }
 
   void captureImage() async {
     try {
@@ -238,10 +258,14 @@ class _CameraScreenState extends State<CameraScreen> {
         String status = jsonDecode(response.body)['status'];
         if (status=='ok') {
 
+          Fluttertoast.showToast(msg: "Diary saved successfully");
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) => HomeNewPage(title: "Home"),));
 
 
-          Navigator.pushReplacement(context, MaterialPageRoute(
-            builder: (context) => CameraScreen(camera: widget.camera),));
+          //
+          // Navigator.pushReplacement(context, MaterialPageRoute(
+          //   builder: (context) => CameraScreen(camera: widget.camera),));
         }else {
           Fluttertoast.showToast(msg: 'Not Found');
         }

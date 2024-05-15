@@ -121,7 +121,7 @@ class _MyDiaryPageState extends State<MyDiaryPage> {
         String status = jsonDecode(response.body)['status'];
         if (status=='ok') {
 
-
+          Fluttertoast.showToast(msg: "Diary saved successfully");
 
           Navigator.push(context, MaterialPageRoute(
             builder: (context) => HomeNewPage(title: "Home"),));
